@@ -1,104 +1,123 @@
-* * {
-    margin: 0%;
-    padding: 0%;
-    background-color: rgba(0, 168, 146, 0.979);
-}
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.ip {
+    body {
+      background-color: rgba(0, 168, 146, 0.979);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
 
-    display: flex;
-    justify-content: center
-}
+    nav {
+      background-color: #007bff;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
 
-.ip label {
-    border: 1px solid black;
-    position: relative;
-    margin-top: 100px;
-    background-color: rgba(43, 224, 43, 0.664);
+    nav h1 {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 2.5rem;
+    }
 
-    width: 200px;
-    padding-top: 5px;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: large;
-    font-style: italic;
+    nav img {
+      position: absolute;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+    }
 
+    .ip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 100px auto 20px;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 800px;
+    }
 
-}
+    .ip label {
+      background-color: rgba(43, 224, 43, 0.664);
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+      font-size: large;
+      font-style: italic;
+      border: 1px solid black;
+    }
 
-.ip #task {
-    position: relative;
-    margin-top: 100px;
-    background-color: crimson;
-    width: 300px;
-    color: white;
-    font-size: larger;
-    border: 1px solid black;
-}
+    #task {
+      background-color: crimson;
+      color: white;
+      width: 300px;
+      padding: 10px;
+      font-size: larger;
+      border: 1px solid black;
+    }
 
-.ip button {
-    border: 1px solid black;
-    position: relative;
-    margin-top: 100px;
-    background-color: rgba(4, 120, 228, 0.979);
-    color: white;
-    width: 100px;
+    .ip button {
+      background-color: rgba(4, 120, 228, 0.979);
+      color: white;
+      width: 100px;
+      padding: 10px;
+      font-size: larger;
+      border: 1px solid black;
+    }
 
-    font-size: larger;
+    ul#list {
+      list-style-type: none;
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px;
+    }
 
-}
+    ul#list li {
+      position: relative;
+      background-color: #168097;
+      padding: 10px 60px 10px 30px;
+      margin: 10px 0;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border-radius: 4px;
+    }
 
-.ip ul {
+    ul#list li input[type="checkbox"] {
+      height: 20px;
+      width: 20px;
+    }
 
-    position: absolute;
-    top: 180px;
-    left: 410px;
-    width: 600px;
+    ul#list li span.btn {
+      position: absolute;
+      right: 10px;
+      background-color: red;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
 
+    @media screen and (max-width: 600px) {
+      .ip {
+        flex-direction: column;
+      }
 
-}
+      #task {
+        width: 100%;
+      }
 
-ul li {
-
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30px;
-    cursor: pointer;
-
-}
-
-h1 {
-    display: block;
-    position: relative;
-    top: 20px;
-    left: 500px;
-    color: rgb(137, 223, 0);
-    font-size: 40px;
-}
-
-img {
-    position: absolute;
-    width: 80px;
-    height: 60px;
-
-}
-
-ul li input {
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    right: 60px;
-
-}
-
-ul li span {
-    font-size: 40px;
-    border: 2px solid rgba(255, 0, 0, 0.555);
-    position: absolute;
-    right: 5px;
-    height: 20px;
-    width: 20px;
-    display: inline-flex;
-    align-items: center;
-    color: rgba(255, 0, 0, 0.877);
-}
+      ul#list li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
